@@ -187,6 +187,7 @@ public class ShapeManagement {
             for(int i = 0; i<listShapes.size(); i++) { 
                 // ID trùng thì in ra
                 if(listShapes.get(i).getID().equals(findID)){
+                    listShapes.get(i).showProfile();
                 }
             }
         }
