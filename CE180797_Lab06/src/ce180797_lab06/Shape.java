@@ -16,7 +16,6 @@ public abstract class Shape {
     
     // Constructor methods
     public Shape() {
-        this.dateCreated = new Date();
     }
     public Shape(String ID, String color, boolean isFilled) {
         this.ID = ID;
@@ -51,13 +50,13 @@ public abstract class Shape {
         this.dateCreated = dateCreated;
     }
     
-    // Method trả về ngày
+    // Method trả về tháng/ngày/năm (format lại)
     @Override
     public String toString() {
         SimpleDateFormat currentDate = new SimpleDateFormat("MM/dd/yy");
         String currentdate = currentDate.format(dateCreated);
         return currentdate;
-    }
+    } // toString() lấy chung từ class Shape nên những class extend không cần format trong prinf() khi in
 
     // Abstract methods, để class con xử lý
     public abstract double getArea();

@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class IOCE180797 {
     private static Scanner input = new Scanner(System.in);
     
+    // Method bắt lỗi string không được trống
     public static String getString(String iMsg) {
         String str;
         while(true) {
@@ -22,7 +23,7 @@ public class IOCE180797 {
         }
     }
     
-    // Method bắt lỗi String
+    // Method bắt lỗi string phải có chiều dài numLength
     public static String getString(String iMsg, String eMsg, int numLength) {
         String str;
         while (true) {
@@ -33,11 +34,10 @@ public class IOCE180797 {
                 continue;
             }
             try {
-                if (str.length() != numLength) {
+                if(str.length() != numLength)
                     throw new Exception();
-                }
                 return str;
-            } catch (Exception e) {
+            } catch(Exception e) {
                 System.out.println(eMsg);
             }
         }
@@ -66,23 +66,23 @@ public class IOCE180797 {
         }
     }
     
-    // Method kiểm tra số thực
+    // Method kiểm tra số thực. Phải không empty và lớn hơn num
     public static double getDouble(String iMsg, String eMsg, int num) {
-        while (true) {
+        while(true) {
             System.out.print(iMsg);
             String number = input.nextLine();
-            if (number.isEmpty()) {
+            if(number.isEmpty()) {
                 System.out.println("Not empty!");
                 continue;
             }
             try {
                 double n = Double.parseDouble(number);
-                if (n <= num)
+                if(n<=num)
                     throw new IllegalArgumentException();
                 return n;
-            } catch (NumberFormatException e) {
+            } catch(NumberFormatException e) {
                 System.out.println("It's must be a number!");
-            } catch (IllegalArgumentException e) {
+            } catch(IllegalArgumentException e) {
                 System.out.println(eMsg);
             }
         }

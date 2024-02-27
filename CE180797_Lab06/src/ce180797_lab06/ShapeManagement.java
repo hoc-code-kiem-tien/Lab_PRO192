@@ -53,11 +53,11 @@ public class ShapeManagement {
         do {            
             ID = IOCE180797.getString("Input ID: ", "ID must be exactly 2 characters.", 2); 
             position = searchShapeByID(ID);
-            if (position != -1) {
+            if(position != -1) {
                 System.out.println("This " + ID + " is already exists!");
             }
-        } while (position != -1);
-        color = IOCE180797.getString("Input color: "); //Tham chiếu biến String color đến phương thức getString() có trong file IOCE181022 để kiểm tra tính hợp lệ của color.
+        } while(position != -1);
+        color = IOCE180797.getString("Input color: ");
         side1 = IOCE180797.getDouble("Input the first side: ", "Side must be greater than 0.", 0); 
         side2 = IOCE180797.getDouble("Input the second side: ", "Side must be greater than 0.", 0); 
         side3 = IOCE180797.getDouble("Input the third side: ", "Side must be greater than 0.", 0); 
@@ -76,7 +76,7 @@ public class ShapeManagement {
         do {            
             ID = IOCE180797.getString("Input ID: ", "ID must be exactly 2 characters.", 2); 
             pos = searchShapeByID(ID);
-            if (pos != -1) {
+            if(pos != -1) {
                 System.out.println("This " + ID + " is already exists!");
             }
         } while (pos != -1);
@@ -98,10 +98,10 @@ public class ShapeManagement {
         do {            
             ID = IOCE180797.getString("Input ID: ", "ID must be exactly 2 characters.", 2); 
             pos = searchShapeByID(ID);
-            if (pos != -1) {
+            if(pos != -1) {
                 System.out.println("This " + ID + " is already exists!");
             }
-        } while (pos != -1);
+        } while(pos != -1);
         color = IOCE180797.getString("Input color: "); 
         edge = IOCE180797.getDouble("Input edge: ", "Edge must be greater than 0.", 0); 
         filled = IOCE180797.isFilled(); 

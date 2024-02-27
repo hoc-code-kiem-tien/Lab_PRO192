@@ -38,7 +38,7 @@ public class Circle extends Shape{
     // Method in ra các thông tin
     @Override
     public void showProfile(){
-        System.out.printf("|%-10s|%4s|%s|%10s|%5s|%5.1f|%5s|%5s|%5.1f|%5.1f|\n",
+        System.out.printf("|%-12s|%4s|%s|%10s| %s|%5.1f|%5s|%5s|%5.1f|%5.1f|\n",
                 "Circle:", getID(), toString(), getColor(), isFilled(), radius, "-", "-", getArea(), getPerimeter());
     }
 

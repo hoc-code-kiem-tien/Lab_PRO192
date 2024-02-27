@@ -32,7 +32,7 @@ public abstract class Quadriateral extends Shape{
     @Override
     public void showProfile() {
         System.out.printf("%4s|%s|%10s| %s|", getID(), toString(), getColor(), isFilled());
-    }
+    } // class Rectangle và Square đều có ID, ngày, màu, filled. Cho tụi nó kế thừa method này
     
     
 }

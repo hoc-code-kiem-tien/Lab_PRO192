@@ -38,6 +38,13 @@ public class Triangle extends Shape {
         this.side_3 = side_3;
     }
 
+    // Phương thức in ra các thông tin
+    @Override
+    public void showProfile() {
+        System.out.printf("|%-12s|%4s|%s|%10s| %s|%5.1f|%5.1f|%5.1f|%5.1f|%5.1f|\n",
+                "Triangle:", getID(), toString(), getColor(), isFilled(), side_1, side_2, side_3, getArea(), getPerimeter());
+    } 
+    
     // Phương thức trả về diện tích
     @Override
     public double getArea() {
@@ -51,11 +58,4 @@ public class Triangle extends Shape {
         return side_1+side_2+side_3;
     }
     
-    // Phương thức in ra các thông tin
-    @Override
-    public void showProfile() {
-        System.out.printf("|%-10s|%4s|%s|%10s|%5s|%5.1f|%5.1f|%5.1f|%5.1f|%5.1f|\n",
-                "Triangle:", getID(), toString(), getColor(), isFilled(), side_1, side_2, side_3, getArea(), getPerimeter());
-    }
-
 }

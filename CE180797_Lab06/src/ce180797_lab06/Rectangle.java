@@ -21,12 +21,12 @@ public class Rectangle extends Quadriateral {
     // Method trả về chu vi
     @Override
     public double getPerimeter() {
-        return (getWidth() + getHeight()) * 2;
+        return (getWidth()+getHeight())*2;
     }
 
     @Override
     public void showProfile() {
-        System.out.printf("|%-10s|","Rectangle");
+        System.out.printf("|%-12s|","Rectangle");
         super.showProfile(); //Gọi lại phương thức showProfile() trong class Quadrilateral.
         System.out.printf("%5.1f|%5.1f|%5s|%5.1f|%5.1f|\n", getWidth(), getHeight(),"-" ,getArea(), getPerimeter());
     }

@@ -8,17 +8,9 @@ import util.IOCE180797;
  * @author Nguyen Hoang Dat
  */
 public class CE180797_Lab06 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // initialize scanner
-        ShapeManagement shapes = new ShapeManagement();
-        Scanner input = new Scanner(System.in);
-        
-        do {
-            // Shows menu and receives the option
+ 
+    // Method to show menu according to requirement
+    public static void showMenu() {
             System.out.println("---- SHAPE MANAGEMENT ----");
             System.out.println("1. Adds new Circle.");
             System.out.println("2. Adds new Triangle.");
@@ -29,9 +21,18 @@ public class CE180797_Lab06 {
             System.out.println("7. Sort ascending by shape area.");
             System.out.println("8. Search a shape.");
             System.out.println("9. Quit.");
+    }
+    
+    public static void main(String[] args) {
+        // initialize scanner
+        ShapeManagement shapes = new ShapeManagement();
+        Scanner input = new Scanner(System.in);
+        
+        do {        
+            // Receive the option
+            showMenu();
             int option = IOCE180797.getInteger("Please select a function:", "The function of application must be from 1 to 9!", 1, 9);
-            
-            // Xét các trường hợp để gọi method
+            // Consider cases to call method
             switch (option) {
                 case 1:
                     shapes.addCircle(); 
@@ -58,7 +59,7 @@ public class CE180797_Lab06 {
                     shapes.searchShape(); 
                     break;
                 case 9: 
-                    // case thoát chương trình, in ra thông báo rồi return
+                    // Exit case. Announce and exit.
                     System.out.println("THANK FOR USING OUR APPLICATION!");
                     System.out.print("SEE YOU AGAIN!");
                     return;
