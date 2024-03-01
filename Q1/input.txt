@@ -1,0 +1,7 @@
+6
+Clear 
+C C01 Red 5.5 
+R R01 Blue 4.5 5.5 
+C C02 Green 6.0 
+Print 
+Clear 

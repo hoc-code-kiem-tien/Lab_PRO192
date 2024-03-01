@@ -1,0 +1,11 @@
+------
+* Remove all
+Add Circle: C01 - Red - 5.5
+Add Rectangle: R01 - Blue - 4.5 - 5.5
+Add Circle: C02 - Green - 6.0
+---Print---
+Circle: C01 - Red - 5.5 - 95.0 - 34.6
+Rectangle: R01 - Blue - 4.5 - 5.5 - 24.8 - 5.0
+Circle: C02 - Green - 6.0 - 113.1 - 37.7
+------
+* Remove all
